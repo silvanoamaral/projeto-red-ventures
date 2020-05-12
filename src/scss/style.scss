@@ -1,0 +1,246 @@
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.padding15 {
+  padding: 0 15px;
+}
+
+header {
+  padding: 30px 15px 50px 15px;
+}
+
+.box {
+  &__select {
+    align-items: center;
+    display: inline-block;
+    justify-content: space-between;
+    padding-bottom: 60px;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  
+    > div {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media (min-width: 768px) {
+        width: 30%;
+        margin: 0;
+      }
+
+      .icone {
+        height: 75px;
+      }
+
+      p {
+        margin: 15px 0 20px 0;
+        color: #848484;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      select {
+        color: #A8A8A8;
+        background-image: url(../assets/images/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 93% center;
+        border: 1px solid #A8A8A8;
+        box-sizing: border-box;
+        border-radius: 19px;
+        cursor: pointer;
+        width: 100%;
+        padding: 10px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 27px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+  &__error {
+    display: inline-block;
+    padding: 0 15px;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    img {
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: auto;
+      }
+    }
+    .mensage {
+      margin-bottom: 15px;
+
+      @media (min-width: 768px) {
+        margin: 0;
+      }
+
+      strong {
+        font-weight: 600;
+        font-size: 35px;
+        line-height: 10px;
+        color: #A9A9A9;
+
+        @media (min-width: 768px) {
+          font-size: 45px;
+          line-height: 55px;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 27px;
+        color: #A9A9A9;
+        width: 50%;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.loading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 67px;
+  color: #0B2A1E;
+  margin: auto;
+  min-height: 600px;
+}
+
+section {
+  &.title {
+    margin-bottom: 70px;
+    padding: 0 15px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+    
+    img {
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: auto;
+      }
+    }
+  }
+
+  &.vitrine {
+    background: #F6F6F6;
+    padding: 50px 0;
+
+    .title {
+      margin-bottom: 60px;
+      display: grid;
+
+      img:first-child {
+        margin-bottom: 30px;
+      }
+
+      img:last-child {
+        width: 90%;
+        margin: 0 auto;
+        @media (min-width: 768px) {
+          width: auto;
+          margin: 0;
+        }
+      }
+      
+    }
+
+    .result {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 5px;
+        margin: auto auto 20px auto;
+        padding: 10px;
+
+        @media (min-width: 768px) {
+          margin: 0 25px 25px 0;
+        }
+
+        .image {
+          width: 240px;
+          height: 240px;
+        }
+
+        strong {
+          color: #257556;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        .info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 15px;
+        }
+
+        .icones {
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+    .btn__back {
+      border: 1px solid #15573F;
+      border-radius: 25px;
+      align-items: center;
+      color: #196146;
+      cursor: pointer;
+      display: flex;
+      width: 100%;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 13px 0;
+      text-align: center;
+      justify-content: center;
+      margin-top: 50px;
+
+      img {
+        margin-right: 15px;
+      }
+      &:hover {
+        color: #19614694;
+        img {
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
