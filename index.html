@@ -1,7 +1,9 @@
 <html>
 <head>
   <title>Red Ventures</title>
-  <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Projeto Red Ventures">
+  <meta name="author" content="Silvano Amaral">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,18 +35,11 @@
 
   <script src='src/helpers/handleClickBack.js'></script>
   <script src='src/View/SelectView.js'></script>
-  <script src='src/View/VitrineView.js'></script>
   <script src='src/model/opcoesSelect.js'></script>
-
-  <script>
-    const select = new SelectView(document.querySelector('.box__select'))
-    const data = new OpcoesSelect()
-    select.update(data.opcoesSelect)
-
-    let params = {}
-  </script>
-
-  <script src='src/services/PlantasServices.js'></script>
+  <script src="src/View/Init.js"></script>
+  <script src='src/View/VitrineView.js'></script>
+  
+  <script src='src/services/PlantasServico.js'></script>
   <script src='src/helpers/handleChange.js'></script>
   
   <link href="./src/css/style.css" rel="stylesheet" type="text/css" />

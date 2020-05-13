@@ -5,15 +5,16 @@ class SelectView {
 
   _template(model) {
     return model.map(item => {
-      return `<div><div class="icone"><img src="/src/assets/images/${item.icone}.svg" alt="${item.titulo}" /></div>
-      <p>${item.titulo}</p>
+      return `<div>
+        <div class="icone">
+          <img src="/src/assets/images/${item.icone}.svg" alt="${item.titulo}" />
+        </div>
+        <p>${item.titulo}</p>
         <select id="${item.nome}">
           <option value="">Select...</option>
-          ${item.opcoes.map(opc => {
-              return `<option value="${opc}">${opc}</option>`
-            })
-          }
-        </select></div>`
+          ${item.opcoes.map(opc => `<option value="${opc}">${opc}</option>`) }
+        </select>
+      </div>`
     }).join('')
   }
 

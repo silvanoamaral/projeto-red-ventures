@@ -5,28 +5,32 @@ class VitrineView {
 
   _template(model) {
     return `<div class="title">
-    <img src="/src/assets/images/result-pick.svg" alt="result-pick" />
-    <img src="/src/assets/images/result-our-picks-for-you.svg" alt="result-our-picks-for-you" />          
-  </div>
-  <div class="result">
-    ${model.map(item => {
-      return `<div class="card">
-        <div class="image"><img src="${item.url}" alt="${item.name}" /></div>
-        <div>
-          <strong>${item.name}</strong>
-          <div class="info">
-            <div>
-              <strong>$${item.price}</strong>
-            </div>
-            <div class="icones">
-              <img src="/src/assets/images/PetCard.svg" alt="" />
-              <img src="/src/assets/images/HighSunCard.svg" alt="" />
-              <img src="/src/assets/images/HighSun.svg" alt="" />
+      <img src="/src/assets/images/result-pick.svg" alt="result-pick" />
+      <img src="/src/assets/images/result-our-picks-for-you.svg" alt="result-our-picks-for-you" />          
+    </div>
+    <div class="result">
+    ${
+      model.map(item => {
+        return `<div class="card">
+          <div class="image">
+            <img src="${item.url}" alt="${item.name}" />
+          </div>
+          <div>
+            <strong>${item.name}</strong>
+            <div class="info">
+              <div>
+                <strong>$${item.price}</strong>
+              </div>
+              <div class="icones">
+                <img src="/src/assets/images/PetCard.svg" alt="" />
+                <img src="/src/assets/images/HighSunCard.svg" alt="" />
+                <img src="/src/assets/images/HighSun.svg" alt="" />
+              </div>
             </div>
           </div>
-        </div>
         </div>`
-    }).join('')}</div>`
+      }).join('')
+    }</div>`
   }
 
   removeHide() {
